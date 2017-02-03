@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+#storbox
+{
+	margin:auto;
+	background-color:#FFF;
+	height:100%;
+	width:1610px;
+	position:absolute;
+}
+header
+{
+	overflow:hidden;
+	text-align:center;
+	height:20%;
+	width:100%;
+}
+nav
+{
+	background-color:#063160;
+	height:5%;
+	width:100%;
+	float:left;
+}
+figure
+{
+	margin:auto;
+	text-align:center;
+}
+article
+{	
+	font-family:Verdana, Geneva, sans-serif;
+	background-color:#609;
+	height:73%;
+	width:100%;
+	float:left;
+	text-align:center;
+	color:#0F0;
+}
+#ban
+{
+	padding-top:10%;
+}
+#spot
+{
+	padding-top:10%;
+}
+ul
+{
+	list-style:none;
+	background-color:#444;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+li
+{
+	text-align:center;
+	color:#3FF;
+	line-height:40px;
+	height:100%;
+	width:33%;
+	float:left;
+}
+a{
+	
+  -webkit-backface-visibility:hidden;
+	position:relative;
+  	transition:0.1s color ease;
+	text-decoration:none;
+	color:#81b3d2;
+	font-size:2.2em;
+}
+a:hover{
+	color:#FFF;
+}
+.Links
+{
+	font-size:1.2em;
+	text-decoration:underline;
+}
