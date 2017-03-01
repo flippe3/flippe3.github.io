@@ -3,13 +3,16 @@ var foodX = 0, foodY = 0;
 var snake_dir = 0;
 var snake_length = 1;
 var columns = 30;
+var gameOver = false;
 var rows = 30;
+
 function setup()
 {
-	frameRate(20);
+	frameRate(10);
 	var myCanvas = createCanvas(600, 600);
 	myCanvas.parent('myContainer');
 	snake = new Snake();
+	document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
 	gen_food();
 }
 function draw()
@@ -17,6 +20,7 @@ function draw()
 	background(0);
 	snake.update();
 	snake.show();
+	simple_ai();
 }
 function keyPressed()
 {
@@ -40,6 +44,8 @@ function keyPressed()
 		snake_dir = -2;
 		snake.dir(-1, 0);
 	}
+	else if(keyCode === 81)
+		snake_length++;
 }
 function gen_food()
 {

@@ -1,6 +1,7 @@
 // JavaScript Document
 var snakeX = [300];
 var snakeY = [300];
+var delay = 5; // Seconds
 function Snake()
 {
 	this.xspeed = 1;
@@ -11,7 +12,6 @@ function Snake()
 		this.xspeed = x;
 		this.yspeed = y;
 	}
-	
 	this.update = function()
 	{
 		for(var i = 0; i < snake_length; i++)
@@ -19,16 +19,30 @@ function Snake()
 			snakeX[i] += this.xspeed * 20;
 			snakeY[i] += this.yspeed * 20;
 		}
-		snakeX[0] = constrain(snakeX[0], 20, width - 40);
-		snakeY[0] = constrain(snakeY[0], 20, height - 40);
 		if(snakeX[0] === foodX && snakeY[0] === foodY)
 		{
 			gen_food();
 			snake_length++;
+			document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
+		}
+		if(snakeX[0] === 580 ||snakeY[0] === 580 || snakeX[0] === 0 || snakeY[0] === 0)
+			gameOver = true;
+		if(gameOver === true)
+		{
+			window.alert("The snakes length was: " + snake_length);
+			snake_length = 1;
+			document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
+			this.xspeed = 0;
+			this.yspeed = 0;
+			snakeX[0] = 300;
+			snakeY[0] = 300;
+			setTimeout(pause, delay * 1000);
+			gameOver = false;
 		}
 	}
 	this.show = function()
 	{	
+		//simple_ai();
 		for(var i = snake_length - 1; i > 0; i--)
 		{
 			if(this.xspeed === 1)
@@ -64,7 +78,7 @@ function Snake()
 			if(last <= 20 ||last >= 580)
 				stroke(255, 0, 0);
 			else
-				stroke(200);
+				stroke(15);
 			if(last === 600)
 				last -= 1;
 			
@@ -77,7 +91,7 @@ function Snake()
 			if(clast <= 20 ||clast >= 580)
 				stroke(255, 0, 0);
 			else
-				stroke(200);
+				stroke(15);
 			if(clast === 600)
 				clast -= 1;
 			
@@ -87,4 +101,8 @@ function Snake()
 		fill(255, 0, 0);
 		rect(foodX + 1, foodY + 1, 18, 18)
 	}
+}
+function pause()
+{
+	snake.xspeed = 1;
 }

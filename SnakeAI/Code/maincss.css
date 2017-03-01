@@ -10,7 +10,7 @@
 	background-color: #FFF;
 	height:800px;
 	width:1600px;
-	position:absolute;
+	position: absolute;
 }
 header
 {
@@ -27,6 +27,15 @@ h1
 	font-size: 102px;
 	margin-top: 40px;
 	
+}
+h2
+{
+	font-family: "Header_font";
+	color: #8D2EB7;
+	font-size: 36px;
+	text-align: center;
+	padding-left: 50%;
+	position: absolute;
 }
 #miniheader
 {
@@ -92,6 +101,7 @@ article
 {
 	padding-left: 3%;
 	padding-top: 3%;
+	float: left;
 }
 aside
 {
