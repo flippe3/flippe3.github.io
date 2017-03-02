@@ -18,12 +18,12 @@ function simple_ai()
 	}
 	else if(foodX > snakeX[0] && snake_dir != -2)
 	{
-		snake_dir = 2;
+		snake_dir = -2;
 		snake.dir(1, 0);
 	}
 	else if(foodX < snakeX[0] && snake_dir != 2)
 	{
-		snake_dir = -2;
+		snake_dir = 2;
 		snake.dir(-1, 0);
 	}
 }
@@ -31,7 +31,7 @@ function dodge()
 {
 	for(var i = 0; i < snake_length; i++)
 	{
-		if(snake_dir === 1  && snakeY[0] + 20 === snakeY[i] && snakeX[0] === snakeX[i])
+		if(snake_dir === 1  && snakeY[0] - 20 === snakeY[i] && snakeX[0] === snakeX[i])
 		{
 			if(!check_left())
 			{
@@ -44,7 +44,7 @@ function dodge()
 				snake.dir(1, 0);
 			}
 		}
-		else if(snake_dir === -1  && snakeY[0] - 20 === snakeY[i] && snakeX[0] === snakeX[i])
+		else if(snake_dir === -1  && snakeY[0] + 20 === snakeY[i] && snakeX[0] === snakeX[i])
 		{
 			if(!check_left())
 			{
@@ -108,7 +108,7 @@ function check_right()
 		if(snakeY[i] === snakeY[0] && snakeX[i] === snakeX[0] + 20)
 			return true;
 	}
-	if(snakeY[0] + 20 === 580)
+	if(snakeX[0] + 20 === 580)
 		return true;
 	
 	return false;
@@ -117,7 +117,7 @@ function check_up()
 {
 	for(var i = 0; i < snake_length; i++)
 	{
-		if(snakeY[i] === snakeY[0] + 20 && snakeX[i] === snakeX[0])
+		if(snakeY[i] === snakeY[0] - 20 && snakeX[i] === snakeX[0])
 			return true;
 	}
 	if(snakeY[0] - 20 === 0)
@@ -129,7 +129,7 @@ function check_down()
 {
 	for(var i = 0; i < snake_length; i++)
 	{
-		if(snakeY[i] === snakeY[0] - 20 && snakeX[i] === snakeX[0])
+		if(snakeY[i] === snakeY[0] + 20 && snakeX[i] === snakeX[0])
 			return true;
 	}
 	if(snakeY[0] + 20 === 580)
@@ -139,7 +139,7 @@ function check_down()
 }
 function check_gameover()
 {
-	if(snakeX[0] === 0 || snakeX[0] === 580 || snakeY[0] === 0 || snakeY[0] === 0)
+	if(snakeX[0] === 0 || snakeX[0] === 560 || snakeY[0] === 0 || snakeY[0] === 0)
 		gameOver = true;
 	
 	for(var i = 1; i < snake_length; i++)

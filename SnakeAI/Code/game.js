@@ -8,7 +8,7 @@ var rows = 30;
 
 function setup()
 {
-	frameRate(40);
+	frameRate(10);
 	var myCanvas = createCanvas(600, 600);
 	myCanvas.parent('myContainer');
 	snake = new Snake();
