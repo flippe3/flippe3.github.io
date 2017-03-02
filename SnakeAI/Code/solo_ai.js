@@ -18,12 +18,12 @@ function simple_ai()
 	}
 	else if(foodX > snakeX[0] && snake_dir != -2)
 	{
-		snake_dir = -2;
+		snake_dir = 2;
 		snake.dir(1, 0);
 	}
 	else if(foodX < snakeX[0] && snake_dir != 2)
 	{
-		snake_dir = 2;
+		snake_dir = -2;
 		snake.dir(-1, 0);
 	}
 }
@@ -31,7 +31,7 @@ function dodge()
 {
 	for(var i = 0; i < snake_length; i++)
 	{
-		if(snake_dir === 1  && snakeY[0] - 20 === snakeY[i] && snakeX[0] === snakeX[i])
+		if(snake_dir === 1  && snakeY[0] + 20 === snakeY[i] && snakeX[0] === snakeX[i])
 		{
 			if(!check_left())
 			{
@@ -44,7 +44,7 @@ function dodge()
 				snake.dir(1, 0);
 			}
 		}
-		else if(snake_dir === -1  && snakeY[0] + 20 === snakeY[i] && snakeX[0] === snakeX[i])
+		else if(snake_dir === -1  && snakeY[0] - 20 === snakeY[i] && snakeX[0] === snakeX[i])
 		{
 			if(!check_left())
 			{
@@ -57,7 +57,7 @@ function dodge()
 				snake.dir(1, 0);
 			}
 		}
-		else if(snake_dir === 2 && snakeY[0] === snakeY[i] && snakeX[0] + 20 === snakeX[i])
+		else if(snake_dir === -2 && snakeY[0] === snakeY[i] && snakeX[0] - 20 === snakeX[i])
 		{
 			if(!check_up())
 			{
@@ -70,7 +70,7 @@ function dodge()
 				snake.dir(0, 1);
 			}
 		}
-		else if(snake_dir === 2 && snakeY[0] === snakeY[i] && snakeX[0] - 20 === snakeX[i])
+		else if(snake_dir === 2 && snakeY[0] === snakeY[i] && snakeX[0] + 20 === snakeX[i])
 		{
 			if(!check_up())
 			{
@@ -98,7 +98,6 @@ function check_left()
 	}
 	if(snakeX[0] - 20 === 0)
 		return true;
-	
 	return false;
 }
 function check_right()
@@ -134,7 +133,6 @@ function check_down()
 	}
 	if(snakeY[0] + 20 === 580)
 		return true;
-	
 	return false;
 }
 function check_gameover()

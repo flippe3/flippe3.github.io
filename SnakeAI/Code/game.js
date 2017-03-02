@@ -8,7 +8,7 @@ var rows = 30;
 
 function setup()
 {
-	frameRate(10);
+	frameRate(40);
 	var myCanvas = createCanvas(600, 600);
 	myCanvas.parent('myContainer');
 	snake = new Snake();
@@ -21,8 +21,10 @@ function draw()
 	snake.update();
 	snake.show();
 	simple_ai();
-	//dodge();
+	dodge();
 	check_gameover();
+	console.log("snakeX" + snakeX[0]);
+	console.log("snakeY" + snakeY[0]);
 }
 function keyPressed()
 {

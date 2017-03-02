@@ -2,7 +2,12 @@
 @font-face
 {
 	font-family: "Header_font";
-	src: url(../Fonts/LEIXO-DEMO.ttf)
+	src: url("../Fonts/LEIXO-DEMO.ttf");
+}
+@font-face
+{
+	font-family: "font2";
+	src: url("../Fonts/CODE Bold.otf");
 }
 #bigbox
 {
@@ -19,6 +24,9 @@ header
 	background-color: #5b0fbf;
 	float:left;
 	text-align: center;
+}
+.siffror{
+	font-family: "font2";
 }
 h1
 {
@@ -109,4 +117,4 @@ aside
 	width:329px;
 	background-color: #ff9c00;
 	float: left;
-}
+} 
