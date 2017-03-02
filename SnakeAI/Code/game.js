@@ -21,7 +21,7 @@ function draw()
 	snake.update();
 	snake.show();
 	simple_ai();
-	dodge();
+	//dodge();
 	check_gameover();
 }
 function keyPressed()
