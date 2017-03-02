@@ -29,7 +29,7 @@ function Snake()
 		}
 		if(gameOver === true)
 		{
-			window.alert("The snakes length was: " + snake_length);
+			//window.alert("The snakes length was: " + snake_length);
 			past_lengths[last_lengts] = snake_length;
 			document.getElementById("past_lengths1").innerHTML = "1. " + past_lengths[0];
 			document.getElementById("past_lengths2").innerHTML = "2. " + past_lengths[1];
