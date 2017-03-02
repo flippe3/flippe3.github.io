@@ -45,16 +45,6 @@ h2
 	padding-left: 50%;
 	position: absolute;
 }
-#xpos
-{
-    margin-top: 5%;
-    padding-top: 5%;
-}
-#ypos
-{
-    margin-top: 10%;
-    padding-top: 10%;
-}
 #miniheader
 {
 	height:207px;
