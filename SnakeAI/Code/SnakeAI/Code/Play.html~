@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Snake AI</title>
+	<link href="maincss.css" rel="stylesheet" type="text/css">
+	<script src="game.js"></script>
+	<script src="snake.js"></script>
+	<script src="solo_ai.js"></script>
+	<script src="../Libraries/p5.js"></script>
+
+	</head>
+	<body>
+		<div id="bigbox">
+			<header>
+				<h1>Snake AI</h1>
+			</header>
+			<div id="miniheader">
+				<section class="tform">
+					<form name="login" action="index_submit" method="get" accept-charset="UTF-8">
+						<input class="user" type="username" name="username" placeholder="username required">
+						<input class="pass" type="password" name="password" placeholder="password required">
+						<input class="btn" type="button" name="login" value="Login">
+					</form>
+				</section>
+			</div>
+			<nav>
+				<ul>
+					<li><a class="linkhover" href="site.html"><span class="siffror">1</span>v<span class="siffror">1</span></a></li>
+					<li><a class="linkhover" href="site.html">Solo</a></li>
+					<li><a class="linkhover" href="site.html">Play</a></li>
+					<li><a class="linkhover" href="site.html">History</a></li>
+				</ul>
+			</nav>
+			<article>
+				<div id="myContainer"></div>
+				<h2 id="snake_length">Current length: 0</h2>
+			</article>
+			<aside>
+				<h3 id="past_lengths1"></h3>
+				<h3 id="past_lengths2"></h3>
+				<h3 id="past_lengths3"></h3>
+				<h3 id="past_lengths4"></h3>
+				<h3 id="past_lengths5"></h3>
+				<h3 id="past_lengths6"></h3>
+				<h3 id="past_lengths7"></h3>
+				<h3 id="past_lengths8"></h3>
+				<h3 id="past_lengths9"></h3>
+				<h3 id="past_lengths10"></h3>
+				<h3 id="past_lengths11"></h3>
+				<h3 id="past_lengths12"></h3>
+				<h3 id="past_lengths13"></h3>
+				<h3 id="past_lengths14"></h3>
+				<h3 id="past_lengths15"></h3>
+				<h3 id="past_lengths16"></h3>
+			</aside>
+		</div>
+	</body>
+</html>
