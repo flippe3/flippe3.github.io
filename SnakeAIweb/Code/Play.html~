@@ -35,6 +35,8 @@
 			<article>
 				<div id="myContainer"></div>
 				<h2 id="snake_length">Current length: 0</h2>
+                                <h2 id="xpos">xpos = 300</h2>
+                                <h2 id="ypos">ypos = 300</h2>
 			</article>
 			<aside>
 				<h3 id="past_lengths1"></h3>
