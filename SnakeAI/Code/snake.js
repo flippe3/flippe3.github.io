@@ -1,7 +1,7 @@
 // JavaScript Document
 var snakeX = [300];
 var snakeY = [300];
-var delay = 5; // Seconds
+var delay = 10; // Seconds
 function Snake()
 {
 	this.xspeed = 1;
@@ -25,11 +25,9 @@ function Snake()
 			snake_length++;
 			document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
 		}
-		if(snakeX[0] === 580 ||snakeY[0] === 580 || snakeX[0] === 0 || snakeY[0] === 0)
-			gameOver = true;
 		if(gameOver === true)
 		{
-			window.alert("The snakes length was: " + snake_length);
+			//window.alert("The snakes length was: " + snake_length);
 			snake_length = 1;
 			document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
 			this.xspeed = 0;
@@ -37,12 +35,11 @@ function Snake()
 			snakeX[0] = 300;
 			snakeY[0] = 300;
 			setTimeout(pause, delay * 1000);
-			gameOver = false;
+			
 		}
 	}
 	this.show = function()
 	{	
-		//simple_ai();
 		for(var i = snake_length - 1; i > 0; i--)
 		{
 			if(this.xspeed === 1)
@@ -104,5 +101,5 @@ function Snake()
 }
 function pause()
 {
-	snake.xspeed = 1;
+	gameOver = false;
 }
