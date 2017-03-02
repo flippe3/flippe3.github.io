@@ -8,7 +8,7 @@ var rows = 30;
 
 function setup()
 {
-	frameRate(40);
+	frameRate(120);
 	var myCanvas = createCanvas(600, 600);
 	myCanvas.parent('myContainer');
 	snake = new Snake();
@@ -21,10 +21,14 @@ function draw()
 	snake.update();
 	snake.show();
 	simple_ai();
-	dodge();
+avoid_walls();
+    dodge();
+    
 	check_gameover();
 	console.log("snakeX" + snakeX[0]);
-	console.log("snakeY" + snakeY[0]);
+    console.log("snakeY" + snakeY[0]);
+    document.getElementById("xpos").innerHTML = "xpos: " + snakeX[0];
+        document.getElementById("ypos").innerHTML = "ypos: " + snakeY[0];
 }
 function keyPressed()
 {
