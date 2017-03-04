@@ -1,49 +1,80 @@
 @charset "utf-8";
 @font-face
 {
-	font-family: "Header_font";
-	src: url("../Fonts/LEIXO-DEMO.ttf");
+    font-family: "Header_font";
+    src: url("../Fonts/LEIXO-DEMO.ttf");
 }
 @font-face
 {
-	font-family: "font2";
-	src: url("../Fonts/CODE Bold.otf");
+    font-family: "font2";
+    src: url("../Fonts/CODE Bold.otf");
+}
+@font-face
+{
+    font-family: "numbers";
+    src: url("../Fonts/VCR_OSD_MONO_1.001.ttf");
+}
+@font-face
+{
+    font-family: "tenum";
+    src: url("../Fonts/LemonMilk.otf");
 }
 #bigbox
 {
-	margin:auto;
-	background-color: #FFF;
-	height:800px;
-	width:1600px;
-	position: absolute;
+    margin:auto;
+    background-color: #FFF;
+    height:800px;
+    width:1600px;
+    position: absolute;
 }
 header
 {
-	height:207px;
-	width:1269px;
-	background-color: #5b0fbf;
-	float:left;
-	text-align: center;
+    height:207px;
+    width:1269px;
+    background-color: #5b0fbf;
+    float:left;
+    text-align: center;
 }
 .siffror{
-	font-family: "font2";
+    font-family: "font2";
 }
 h1
 {
-	font-family: "Header_font";
-	color: #7b9dc0;
-	font-size: 102px;
-	margin-top: 40px;
-	
+    font-family: "Header_font";
+    color: #7b9dc0;
+    font-size: 102px;
+    margin-top: 40px;
+    
 }
 h2
 {
-	font-family: "Header_font";
-	color: #8D2EB7;
-	font-size: 36px;
-	text-align: center;
-	padding-left: 50%;
-	position: absolute;
+    font-family: "Header_font";
+    color: #8D2EB7;
+    font-size: 36px;
+    text-align: center;
+    padding-left: 50%;
+    position: absolute;
+}
+h3
+{
+    font-family: "numbers";
+    font-size: 24px;
+    color: #FFF;
+    text-align: center;
+}
+h4
+{
+    font-family: "Header_font";
+    font-size: 24px;
+    color: #FFF;
+    margin-left: 22%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#Last_length
+{
+    margin-top: 2%;
+    padding-top: 2%;
 }
 #xpos
 {
@@ -57,74 +88,74 @@ h2
 }
 #miniheader
 {
-	height:207px;
-	width:331px;
-	background-color: #440696;
-	float:left; 
+    height:207px;
+    width:331px;
+    background-color: #440696;
+    float:left; 
 }
 .user
 {
-	margin: 10%;
-	padding-left: 5%;
+    margin: 10%;
+    padding-left: 5%;
 }
 .pass
 {
-	margin: 10%;
-	padding-left: 5%;
+    margin: 10%;
+    padding-left: 5%;
 }
 nav
 {
-	height:55px;
-	width:1600px;
-	background-color: #0e5cba;
-	float: left;
+    height:55px;
+    width:1600px;
+    background-color: #0e5cba;
+    float: left;
 }
 ul
 {
-	list-style:none;
-	background-color:#444;
-	text-align:center;
-	padding:0;
-	margin:0;
+    list-style:none;
+    background-color:#444;
+    text-align:center;
+    padding:0;
+    margin:0;
 }
 li
 {
-	color:#000000;
-	line-height:55px;
-	height:100%;
-	width:25%;
-	float:left;
-	font-size: 30px;
-	font-family: "Header_font";
+    color:#000000;
+    line-height:55px;
+    height:100%;
+    width:25%;
+    float:left;
+    font-size: 30px;
+    font-family: "Header_font";
 }
 .linkhover {
-  transition: 0.4s;
-  color: #ffffff;
-  font-size: 30px;
-  text-decoration: none;
+    transition: 0.4s;
+    color: #ffffff;
+    font-size: 30px;
+    text-decoration: none;
 }
 .linkhover:hover {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 9.5px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 9.5px 10px;
 }
 article
 {
-	height:660px;
-	width:1271px;
-	background-color: #212121;
-	float: left;
+    height:660px;
+    width:1271px;
+    background-color: #212121;
+    float: left;
 }
 #myContainer
 {
-	padding-left: 3%;
-	padding-top: 3%;
-	float: left;
+    padding-left: 3%;
+    padding-top: 3%;
+    float: left;
 }
 aside
 {
-	height:660px;
-	width:329px;
-	background-color: #ff9c00;
-	float: left;
+    height:660px;
+    width:329px;
+    background-color: #ff9c00;
+    float: left;
 } 

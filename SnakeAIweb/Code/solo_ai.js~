@@ -5,6 +5,7 @@
 //snake_dir 2 == right
 //snake_dir -2 == left
 var crashed = false;
+var past_lengths = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function simple_ai()
 {
     if(foodY < snakeY[0] && snake_dir != 1 && !check_up())
@@ -201,11 +202,41 @@ function check_down()
 function check_gameover()
 {
     if(snakeX[0] === 0 || snakeX[0] === 580 || snakeY[0] === 0 || snakeY[0] === 580)
-	gameOver = true;
+    {
+        latest_lengths();
+        gameOver = true;
+    }
     
     for(var i = 1; i < snake_length; i++)
     {
 	if(snakeX[0] === snakeX[i] && snakeY[0] === snakeY[i])
-	    gameOver = true;
+        {
+            latest_lengths();
+            gameOver = true;
+        }
     }
+}
+
+function latest_lengths()
+{
+    for(var i = 12; i > 0; i--)
+    {
+        past_lengths[i] = past_lengths[i - 1]; 
+    }
+    past_lengths[0] = snake_length;
+
+    document.getElementById("Last_length").innerHTML = "Last length:  " + past_lengths[0];
+    document.getElementById("past_lengths1").innerHTML = "1. " + past_lengths[0];
+    document.getElementById("past_lengths2").innerHTML = "2. " + past_lengths[1];
+    document.getElementById("past_lengths3").innerHTML = "3. " + past_lengths[2];
+    document.getElementById("past_lengths4").innerHTML = "4. " + past_lengths[3];
+    document.getElementById("past_lengths5").innerHTML = "5. " + past_lengths[4];
+    document.getElementById("past_lengths6").innerHTML = "6. " + past_lengths[5];
+    document.getElementById("past_lengths7").innerHTML = "7. " + past_lengths[6];
+    document.getElementById("past_lengths8").innerHTML = "8. " + past_lengths[7];
+    document.getElementById("past_lengths9").innerHTML = "9. " + past_lengths[8];
+    document.getElementById("past_lengths10").innerHTML = "10. " + past_lengths[9];
+    document.getElementById("past_lengths11").innerHTML = "11. " + past_lengths[10];
+    document.getElementById("past_lengths12").innerHTML = "12. " + past_lengths[11];
+    document.getElementById("past_lengths13").innerHTML = "13. " + past_lengths[12];
 }

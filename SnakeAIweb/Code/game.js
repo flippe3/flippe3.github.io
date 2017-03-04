@@ -8,7 +8,7 @@ var rows = 30;
 
 function setup()
 {
-    frameRate(40);
+    frameRate(60);
     var myCanvas = createCanvas(600, 600);
     myCanvas.parent('myContainer');
     snake = new Snake();
@@ -17,6 +17,12 @@ function setup()
 }
 function draw()
 {
+    window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+    }, false);
     background(0);
     simple_ai();
     dodge();
@@ -24,10 +30,8 @@ function draw()
     check_gameover();
     snake.update();
     snake.show();
-    //console.log("snakeX" + snakeX[0]);
-    //console.log("snakeY" + snakeY[0]);
-    document.getElementById("xpos").innerHTML = "up: " + check_up();
-    document.getElementById("ypos").innerHTML = "down: " + check_down();
+    console.log("last_length" + snakeX[0]);
+    console.log("average" + snakeY[0]);
 }
 function keyPressed()
 {
