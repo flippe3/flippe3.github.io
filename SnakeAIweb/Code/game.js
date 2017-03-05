@@ -5,7 +5,9 @@ var snake_length = 1;
 var columns = 30;
 var gameOver = false;
 var rows = 30;
-
+var shorter__multiplier = 0;
+var longer_multiplier = 0;
+var same_multiplier = 14;
 function setup()
 {
     frameRate(60);
@@ -17,12 +19,13 @@ function setup()
 }
 function draw()
 {
+    //Now it wont scroll with key and arrowkeys
     window.addEventListener("keydown", function(e) {
-    // space and arrow keys
     if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
         e.preventDefault();
     }
     }, false);
+
     background(0);
     simple_ai();
     dodge();
@@ -30,8 +33,8 @@ function draw()
     check_gameover();
     snake.update();
     snake.show();
-    console.log("last_length" + snakeX[0]);
-    console.log("average" + snakeY[0]);
+    document.getElementById("shorter_multiplier").innerHTML = "multiplier: " + shorter_multiplier;
+    document.getElementById("longer_multiplier").innerHTML = "multiplier: " + longer_multiplier;
 }
 function keyPressed()
 {

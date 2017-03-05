@@ -6,6 +6,8 @@
 //snake_dir -2 == left
 var crashed = false;
 var past_lengths = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var divider = 0;
+var sum = 0;
 function simple_ai()
 {
     if(foodY < snakeY[0] && snake_dir != 1 && !check_up())
@@ -103,7 +105,7 @@ function dodge()
 
 function avoid_walls()
 {
-    if(snake_dir === -1 && snakeY[0] - 20 === 0 && crashed === false)
+    if(snake_dir === -1 && snakeY[0] - 20 === 0)
     {
         if(!check_left())
 	{
@@ -118,7 +120,7 @@ function avoid_walls()
             console.log("Going right");
 	}
     }
-    else if(snake_dir === 1 && snakeY[0] + 20 === 580 && crashed === false)
+    else if(snake_dir === 1 && snakeY[0] + 20 === 580)
     {
         if(!check_left())
 	{
@@ -131,7 +133,7 @@ function avoid_walls()
 	    snake.dir(1, 0);
 	}
     }
-    else if(snake_dir === 2 && snakeX[0] + 20 === 580 && crashed === false)
+    if(snake_dir === 2 && snakeX[0] + 20 === 580)
     {
         if(!check_up())
 	{
@@ -144,7 +146,7 @@ function avoid_walls()
 	    snake.dir(0, 1);
 	}
     }
-    else if(snake_dir === -2 && snakeX[0] - 20 === 0 && crashed === false)
+    else if(snake_dir === -2 && snakeX[0] - 20 === 0)
     {
         if(!check_up())
 	{
@@ -205,12 +207,14 @@ function check_gameover()
     {
         latest_lengths();
         gameOver = true;
+        divider++;
     }
     
     for(var i = 1; i < snake_length; i++)
     {
 	if(snakeX[0] === snakeX[i] && snakeY[0] === snakeY[i])
         {
+            divider++;
             latest_lengths();
             gameOver = true;
         }
@@ -224,7 +228,8 @@ function latest_lengths()
         past_lengths[i] = past_lengths[i - 1]; 
     }
     past_lengths[0] = snake_length;
-
+    sum += past_lengths[0];
+    document.getElementById("average").innerHTML = "Average:  " + (sum / divider);
     document.getElementById("Last_length").innerHTML = "Last length:  " + past_lengths[0];
     document.getElementById("past_lengths1").innerHTML = "1. " + past_lengths[0];
     document.getElementById("past_lengths2").innerHTML = "2. " + past_lengths[1];
