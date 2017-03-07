@@ -10,7 +10,7 @@ var longer_multiplier = 0;
 var same_multiplier = 14;
 function setup()
 {
-    frameRate(60);
+    frameRate(50);
     var myCanvas = createCanvas(600, 600);
     myCanvas.parent('myContainer');
     snake = new Snake();
