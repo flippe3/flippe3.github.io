@@ -46,7 +46,6 @@ header
 #longer_multiplier
 {
    float: left;
-   position: absolute;
    margin-top: 320px;
    font-size: 24px;
    margin-left: 1012px;

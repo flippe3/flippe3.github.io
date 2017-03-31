@@ -1,0 +1,31 @@
+var startX = 0, startY = 0;
+
+function astar_calc()
+{
+    startX = snakeX[0];
+    startY = snakeY[0];
+    var cost = 0;
+    var sqrtX = 0;
+    var sqrtY = 0;
+    var sqrtstartX = 0;
+    var sqrtstartY = 0;
+    var g = 0, h = 0;
+    for(var i = 1; i < 29; i++)
+    {
+        for(var a = 1; a < 29; a++)
+        {
+            sqrtX = ((20 * i) - foodX) * ((20 * i) - foodX);
+            sqrtY = ((20 * a) - foodY) * ((20 * a) - foodY);
+            
+            h = Math.sqrt(Math.abs(sqrtX + sqrtY));
+
+            sqrtstartX = ((20 * i) - startX) * ((20 * i) - startX);
+            sqrtstartY = ((20 * a) - startY) * ((20 * a) - startY);
+
+            g = Math.sqrt(Math.abs(sqrtstartX + sqrtstartY));
+
+            cost = g + h;
+            console.log("X: " + (20 * i) + " Y: " + (20 * a) + " : " + cost);
+        }
+    }
+}

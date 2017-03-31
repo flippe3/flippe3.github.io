@@ -7,6 +7,7 @@
     <script src="game.js"></script>
     <script src="snake.js"></script>
     <script src="solo_ai.js"></script>
+    <script src="astar.js"></script>
     <script src="../Libraries/p5.js"></script>
 
   </head>
@@ -22,10 +23,10 @@
       </div>
       <nav>
 	<ul>
-	  <li><a class="linkhover" href="site.html"><span class="siffror">1</span>v<span class="siffror">1</span></a></li>
+	  <li><a class="linkhover" href="Play.html"><span class="siffror">1</span>v<span class="siffror">1</span></a></li>
 	  <li><a class="linkhover" href="site.html">Solo</a></li>
-	  <li><a class="linkhover" href="site.html">Play</a></li>
-	  <li><a class="linkhover" href="site.html">History</a></li>
+	  <li><a class="linkhover" href="SinglePlayer.html">Play</a></li>
+	  <li><a class="linkhover" href="history.html">History</a></li>
 	</ul>
       </nav>
       <article>
@@ -33,8 +34,11 @@
 	<h2 id="snake_length">Current length: 0</h2>
         <h2 id="Last_length">Last length: 0</h2>
         <input class="amount" type="text" name="amount" placeholder="Enter bet amount">
-        <input class="lower" type="button" name="lower" value="lower">
-        <input class="higher" type="button" name="higher" value="higher">
+        <input class="lower" type="button" name="lower" value="shorter">
+        <h2 id="shorter_multiplier">multiplier: 0</h2>
+        <h2 id="longer_multiplier">multiplier: 0</h2>
+        <input class="same" type="button" name="same" value="same">
+        <input class="higher" type="button" name="higher" value="longer">
         <h2 id="average">Average: </h2>
       </article>
       <aside>

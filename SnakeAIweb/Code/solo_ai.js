@@ -206,10 +206,11 @@ function check_down()
 }
 function check_gameover()
 {
-    if(snakeX[0] === 0 || snakeX[0] === 580 || snakeY[0] === 0 || snakeY[0] === 580)
+    var dis = 0;
+    if(snakeX[0] <= dis || snakeX[0] >= 580 || snakeY[0] <= dis || snakeY[0] >= 580)
     {
-        latest_lengths();
         gameOver = true;
+        latest_lengths();
         divider++;
     }
     
@@ -217,9 +218,9 @@ function check_gameover()
     {
 	if(snakeX[0] === snakeX[i] && snakeY[0] === snakeY[i])
         {
+            gameOver = true;
             divider++;
             latest_lengths();
-            gameOver = true;
         }
     }
 }
@@ -235,61 +236,65 @@ function latest_lengths()
     document.getElementById("average").innerHTML = "Average:  " + Math.round((sum / divider));
     document.getElementById("Last_length").innerHTML = "Last length:  " + past_lengths[0];
     if(10 >= past_lengths[0])
-        {
-            shorter_multiplier = 12;
-            longer_multiplier = 1.1;
-        }
+    {
+        shorter_multiplier = 12;
+        longer_multiplier = 1.1;
+    }
     else if(past_lengths[0] > 10 && 20 >= past_lengths[0])
-        {
-            shorter_multiplier = 7;
-            longer_multiplier = 1.2;
-        }
+    {
+        shorter_multiplier = 7;
+        longer_multiplier = 1.2;
+    }
     else if(past_lengths[0] > 20 && 30 >= past_lengths[0])
-        {
-            shorter_multiplier = 6;
-            longer_multiplier = 1.5;
-        }
+    {
+        shorter_multiplier = 6;
+        longer_multiplier = 1.5;
+    }
     else if(past_lengths[0] > 30 && 40 >= past_lengths[0])
-        {
-            shorter_multiplier = 2;
-            longer_multiplier = 1.8;
-        }
+    {
+        shorter_multiplier = 2;
+        longer_multiplier = 1.8;
+    }
     else if(past_lengths[0] > 40 && 50 >= past_lengths[0])
-        {
-            shorter_multiplier = 1.5;
-            longer_multiplier = 2;
-        }
+    {
+        shorter_multiplier = 1.5;
+        longer_multiplier = 2;
+    }
     else if(past_lengths[0] > 50 && 60 >= past_lengths[0])
-        {
-            shorter_multiplier = 1.4;
-            longer_multiplier = 3;
-        }
+    {
+        shorter_multiplier = 1.4;
+        longer_multiplier = 3;
+    }
     else if(past_lengths[0] > 60 && 70 >= past_lengths[0])
-        {
-            shorter_multiplier = 1.2;
-            longer_multiplier = 5;
-        }
+    {
+        shorter_multiplier = 1.2;
+        longer_multiplier = 5;
+    }
     else if(past_lengths[0] > 70 && 80 >= past_lengths[0])
-        {
-            shorter_multiplier = 1.2;
-            longer_multiplier = 7;
-        }
+    {
+        shorter_multiplier = 1.2;
+        longer_multiplier = 7;
+    }
     else if(past_lengths[0] > 80)
-        {
-            shorter_multiplier = 1.1;
-            longer_multiplier = 12;
-        }
-    document.getElementById("past_lengths1").innerHTML = "1. " + past_lengths[0];
-    document.getElementById("past_lengths2").innerHTML = "2. " + past_lengths[1];
-    document.getElementById("past_lengths3").innerHTML = "3. " + past_lengths[2];
-    document.getElementById("past_lengths4").innerHTML = "4. " + past_lengths[3];
-    document.getElementById("past_lengths5").innerHTML = "5. " + past_lengths[4];
-    document.getElementById("past_lengths6").innerHTML = "6. " + past_lengths[5];
-    document.getElementById("past_lengths7").innerHTML = "7. " + past_lengths[6];
-    document.getElementById("past_lengths8").innerHTML = "8. " + past_lengths[7];
-    document.getElementById("past_lengths9").innerHTML = "9. " + past_lengths[8];
-    document.getElementById("past_lengths10").innerHTML = "10. " + past_lengths[9];
-    document.getElementById("past_lengths11").innerHTML = "11. " + past_lengths[10];
-    document.getElementById("past_lengths12").innerHTML = "12. " + past_lengths[11];
-    document.getElementById("past_lengths13").innerHTML = "13. " + past_lengths[12];
+    {
+        shorter_multiplier = 1.1;
+        longer_multiplier = 12;
+    }
+    if(!mode_singleplayer)
+    {
+        document.getElementById("past_lengths1").innerHTML = "1. " + past_lengths[0];
+        document.getElementById("past_lengths2").innerHTML = "2. " + past_lengths[1];
+        document.getElementById("past_lengths3").innerHTML = "3. " + past_lengths[2];
+        document.getElementById("past_lengths4").innerHTML = "4. " + past_lengths[3];
+        document.getElementById("past_lengths5").innerHTML = "5. " + past_lengths[4];
+        document.getElementById("past_lengths6").innerHTML = "6. " + past_lengths[5];
+        document.getElementById("past_lengths7").innerHTML = "7. " + past_lengths[6];
+        document.getElementById("past_lengths8").innerHTML = "8. " + past_lengths[7];
+        document.getElementById("past_lengths9").innerHTML = "9. " + past_lengths[8];
+        document.getElementById("past_lengths10").innerHTML = "10. " + past_lengths[9];
+        document.getElementById("past_lengths11").innerHTML = "11. " + past_lengths[10];
+        document.getElementById("past_lengths12").innerHTML = "12. " + past_lengths[11];
+        document.getElementById("past_lengths13").innerHTML = "13. " + past_lengths[12];
+    }
+    
 }

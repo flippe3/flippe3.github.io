@@ -35,26 +35,55 @@ header
     float:left;
     text-align: center;
 }
+#shorter_multiplier
+{
+   float: left;
+   position: absolute;
+   margin-top: 320px;
+   font-size: 24px;
+   margin-left: 661px;
+}
+#longer_multiplier
+{
+   float: left;
+   margin-top: 320px;
+   font-size: 24px;
+   margin-left: 1012px;
+}
+.same
+{
+    height: 5%;
+    width: 5%;
+    margin-top: 260px;
+    margin-left: 280px;
+    position: absolute;
+    font-family: "Header_font";
+    font-size: 18px;
+    color: #FFF;
+    background-color: #5b0fbf;
+}
 .lower
 {
-    margin: 5%;
-    margin-top:2%;
+    margin-left: 25px;
+    margin-top:240px;
     height: 10%;
     width: 15%;
     float: left;
     color: #FFF;
     font-family: "Header_font";
+    position: absolute;
     font-size: 30px;
     background-color: #4444ff;
     
 }
 .higher
 {
-    margin-top: 2%;
-    margin-left: 5%;
+    margin-top: 240px;
+    margin-left: 375px;
     height: 10%;
     width: 15%;
     color: #FFF;
+    position: absolute;
     font-family: "Header_font";
     font-size: 30px;
     float: left;
@@ -66,37 +95,39 @@ header
 }
 #average
 {
-    margin-top: 8%;
+    margin-top: 28%;
     float: left;
 }
 h1
 {
     font-family: "Header_font";
-    color: #7b9dc0;
+    color: #FFF;
     font-size: 102px;
     margin-top: 40px;   
 }
 h2
 {
     font-family: "Header_font";
-    color: #8D2EB7;
+    color: #2a82ef;
     font-size: 36px;
     text-align: center;
-    padding-left: 50%;
     position: absolute;
+    margin-left: 800px;
+    
 }
 h3
 {
     font-family: "numbers";
     font-size: 24px;
-    color: #FFF;
-    text-align: center;
+    color: #2a82ef;
+    margin-left: 22%;
+
 }
 h4
 {
     font-family: "Header_font";
     font-size: 24px;
-    color: #FFF;
+    color: #2a82ef;
     margin-left: 22%;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -137,8 +168,9 @@ h4
     font-family: "Header_font";
     height: 40px;
     width: 240px;
-    margin-top: 140px;
-    margin-left: 15%;
+    margin-top: 170px;
+    margin-left: 170px;
+    position: absolute;
 }
 nav
 {
@@ -188,12 +220,13 @@ article
     padding-left: 3%;
     padding-top: 3%;
     float: left;
+    
 }
 aside
 {
     height:660px;
     width:329px;
-    background-color: #ff9c00;
+    background-color: #212121;
     float: left;
 }
 .user
