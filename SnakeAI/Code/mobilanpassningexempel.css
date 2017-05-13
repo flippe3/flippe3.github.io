@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+article {
+	width: 980px;
+	margin: 0 auto;
+	background-color:#009;
+}
+
+@media screen and (max-width: 980px) {
+
+	article {
+		width: 95%;
+		background-color:#CF3;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	
+	article{
+		background-color:#3FF;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	
+	article{
+		background-color:#F00;
+	}
+
+}
