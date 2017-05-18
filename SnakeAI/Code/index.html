@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    <div id="bigbox">
     <header>
       <a href="index.html"><h1>Snake AI</h1></a>
     </header>
@@ -28,12 +29,18 @@
       </ul>
     </nav>
     <article>
-      <h2 id="snake_length">Current length: 0</h2>
       <div id="myContainer"></div>
+      <h2 id="snake_length">Current length: 0</h2>
       <h2 id="Last_length">Last length: 0</h2>
-      <h2 id="shorter_multiplier">multiplier: 0</h2>
-      <h2 id="longer_multiplier">multiplier: 0</h2>
-      <h2 id="average">Average: </h2>
+      <div class="container_betting">
+        <input type="text" placeholder="Enter amount" name="shorter">
+        <h5 id="bet_length">Shorter</h5>
+        <input type="text" placeholder="Enter amount" name="same">
+        <h5 id="bet_length">Same</h5>
+        <input type="text" placeholder="Enter amount" name="longer">
+        <h5 id="bet_length">Longer</h5>
+        <button id="btn_bet" type="submit" value="Bet">Bet</button>
+      </div>
     </article>
     <aside>
       <h4>Last lengths: </h4>
@@ -51,5 +58,6 @@
       <h3 id="past_lengths12">12. 0</h3>
       <h3 id="past_lengths13">13. 0</h3>
     </aside>
+    </div>
   </body>
 </html>

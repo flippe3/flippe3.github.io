@@ -14,6 +14,11 @@
     font-family: "tenum";
     src: url("../Fonts/LemonMilk.otf");
 }
+@font-face
+{
+    font-family: "Regular";
+    src: url("../Fonts/Champagne & Limousines.ttf");
+}
 *
 {
     box-sizing: border-box;
@@ -21,8 +26,105 @@
 #bigbox
 {
     background-color: #FFF;
-    height: 1200px;
-    width:1600px;
+    height: 900px;
+    width:100%;
+}
+form
+{
+    border: 3px solid #f1f1f1;
+}
+#Terms
+{
+    border: 0px;
+    color: black;
+}
+#loginbody
+{
+    margin: 5%;
+    margin-top: 2%;
+    background-color: #00BFFF;
+}
+b
+{
+    font-family: "Regular";
+    font-size: 20px;
+}
+.container_login
+{
+    padding: 16px;
+    background-color: #87CEFA;
+}
+#loginform
+{
+    font-family: "Header_font";
+    color: #FFF;
+    font-size: 50px;
+    text-align: center;
+
+}
+#cancelbtn
+{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+#submitbtn
+{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.8;
+}
+label
+{
+    float: left;
+}
+.cancelbtn {
+    width: 100%;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+#logininput
+{
+    width: 100%;
+    height: 7%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
 }
 body
 {
@@ -30,16 +132,16 @@ body
 }
 header
 {
-    height:207px;
-    width:1269px;
+    height: 25%;
+    width: 75%;
     background-color: #5b0fbf;
     float:left;
     text-align: center;
 }
 #miniheader
 {
-    height:207px;
-    width:331px;
+    height: 25%;
+    width: 25%;
     background-color: #440696;
     float: left;
 }
@@ -50,11 +152,53 @@ header
     height:207px;
     width:1269px;
 }
-#snake_length
+#snake_length, #Last_length, #snake2_length
 {
     font-size: 40px;
-    margin-left: 2%;
-    float: top;
+    margin: 0;
+    margin-left: 3%;
+    margin-top: 5px;
+    color: #2a82ef;
+    float: left;
+}
+#singleplayer_length
+{
+    float: left;
+}
+#bet_length
+{
+    font-family: "Header_font";
+    color: #FFF;
+    font-size: 22px;
+    margin-left: 4%;
+    margin-top: 2%;
+    float: left;
+}
+#btn_bet
+{
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-top: 3%;
+    margin-left: 40%;
+}
+.container_betting
+{
+    float: left;
+    margin-left: 3%;
+    border: 3px solid #000;
+    color: #FFF;
+    width: 40%;
+    height: 40%;
+    padding: 16px;
+    background-color: #383838;
+}
+input
+{
+    float: left;
+    width: 60%;
+    height: 20%;
+    margin-top: 2%;
 }
 h1
 {
@@ -67,7 +211,6 @@ h1
 h2
 {
     font-family: "Header_font";
-    color: #2a82ef;
     /*font-size: 36px;*/
     /*text-align: center;*/
     /*margin-left: 800px;*/
@@ -78,24 +221,58 @@ h3
     font-family: "numbers";
     font-size: 24px;
     color: #2a82ef;
-    margin-left: 22%;
-
+    margin-left: 15%;
 }
 h4
 {
     font-family: "Header_font";
     font-size: 24px;
     color: #2a82ef;
-    margin-left: 22%;
+    margin-left: 15%;
     margin-top: 2%;
     margin-bottom: 2%;
 }
+h5
+{
+    font-family: "Header_font";
+    font-size: 24px;
+    margin: 0;
+}
 p
 {
+    float: left;
     text-align: left;
-    margin-left: 60%;
-    border: 3px solid;
+    border: 2px solid;
     color: #FFF;
+    width: 30%;
+    margin-left: 2%;
+    
+}
+#history_snake
+{
+    margin-left: 5%;
+}
+img
+{
+    margin-left: 20%;
+    margin-top: 20%;
+}
+#instruct
+{
+    margin: 0;
+    margin-left: 3%;
+    margin-top: 1%;
+    float: left;
+}
+#ove_pic
+{
+    width: 26%;
+}
+#ove
+{
+    margin:0;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 
 .phpbtn
@@ -118,10 +295,11 @@ p
     transform: translate(0px, 5px);
     -webkit-transform: translate(0px, 5px);
 }
+
 nav
 {
-    height:55px;
-    width:1600px;
+    height: 6%;
+    width: 100%;
     background-color: #0e5cba;
     float: left;
 }
@@ -161,20 +339,20 @@ a
 article
 {
     height:660px;
-    width:1271px;
+    width:75%;
     background-color: #212121;
     float: left;
 }
 #myContainer
 {
-    padding-left: 3%;
-    padding-top: 3%;
+    margin-left: 1%;
+    margin-top: 1%;
     float: left;
 }
 aside
 {
     height:660px;
-    width:329px;
+    width: 25%;
     background-color: #212121;
     float: left;
 }
@@ -203,10 +381,67 @@ aside
     aside
     { width: 25%; }
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1480px) {
     #bigbox
     { width: 100%; }
+    nav
+    { width: 100%; }
+    header
+    { width: 75%; }
+    #miniheader
+    { width: 25%; }
+    article
+    { width: 75%; }
+    #snake_length, #Last_length, #snake2_length
+    { font-size: 25px; }
+    .container_betting
+    {
+        width: 30%;
+        height: 28%;
+    }
+    #bet_length
+    {
+        font-size: 16px;
+    }
+    p
+    {
+        width: 20%;
+    }
+    input
+    {
+        width: 55%;
+    }
+    aside
+    { width: 25%; }
+}
+
+@media only screen and (max-width: 1280px)
+{
+    article
+    {
+        width: 75%;
+        height: 900px;
+    }
+    .container_betting
+    {
+        width: 70%;
+        height: 28%;
+    }
+    aside
+    {
+        height: 900px;
+    }
+    #instruct
+    {
+        float: top;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #bigbox
+    {
+        width: 100%;
+        height: 1300px;
+    }
     h1
     {
         font-size: 75px;
@@ -236,22 +471,56 @@ aside
         line-height: 1px;
         font-size: 20px;
     }
+    #snake_length, #Last_length, #snake2_length
+    { font-size: 28px; }
+    #instruct
+    {
+        font-size: 30px;
+    }
+    p
+    {
+        width: 50%;
+    }
+    #ove
+    {
+        width: 10%;
+        height: 20%;
+    }
+    .container_betting
+    {
+        width: 70%;
+        height: 28%;
+    }
     .linkhover
     { font-size: 20px; }
     li
     { line-height: 42.5px;}
     .linkhover:hover
     { padding: 12.8px 10px; }
-    
+
     article
-    { width: 75%; }
+    {
+        width: 100%;
+        height: 50%;
+    }
+    h4, h3
+    {
+        font-size: 22px;
+        margin-left: 3%;
+    }
     aside
-    { width: 25%; }
+    {
+        width: 100%;
+        height: 50%;
+    }
 }
-@media only screen and (max-width: 400px)
+/*
+@media only screen and (max-width: 490px)
 {
     #bigbox
-    { width: 100%; }
+    {
+        height: 1600px;
+    }
     h1
     {
         font-size: 60px;
@@ -275,7 +544,42 @@ aside
         margin-left: 5px;
         margin-top: 8px;
         font-size: 20px;
-    }  
+    }
+    article
+    {
+        width: 100%;
+        height: 70%;
+    }
+    h4, h3
+    {
+        font-size: 18px;
+        margin-left: 3%;
+    }
+    #snake_length, #Last_length, #snake2_length
+    { font-size: 22px; }
+    .container_betting
+    {
+        width: 80%;
+        height: 25%;
+    }
+    aside
+    {
+        width: 100%;
+        height: 60%;
+    }
+    #bet_length
+    {
+        font-size: 14px;
+        margin-top: 6%;
+    }
+    #btn_bet
+    {
+        height: 15%;
+    }
+    input
+    {
+        width: 55%;
+    }
     .linkhover
     { font-size: 17px; }
     li
@@ -287,7 +591,8 @@ aside
     aside
     { width: 25%; }
 }
-
+*/
+/*
 @media only screen and (max-width: 340px)
 {
     #bigbox
@@ -315,7 +620,7 @@ aside
         margin-left: 5px;
         margin-top: 8px;
         font-size: 15px;
-    }  
+    }
     article
     { width: 75%; }
     aside
@@ -327,5 +632,4 @@ aside
     .linkhover:hover
     { padding: 17px 10px; }
 }
-
-
+*/

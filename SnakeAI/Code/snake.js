@@ -43,12 +43,23 @@ function Snake()
         {
             gen_food();
             snake_length++;
-            //document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
+            if(!mode_history)
+            {
+                if(mode_twosnakes)
+                    document.getElementById("snake_length").innerHTML = "Purple length: " + snake_length;
+                else
+                    document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
+                
+            }
+                
+            
+            
         }
         else if(snake2X[0] == food2X && snake2Y[0] == food2Y)
         {
             gen_food2();
             snake2_length++;
+            document.getElementById("snake2_length").innerHTML = "Blue length: " + snake2_length;
         }
 
         if(gameOver == true)
@@ -56,7 +67,16 @@ function Snake()
             console.log(gameOver);
             snake_length = 1;
             snake2_length = 1;
-            //document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
+            if(!mode_history)
+            {
+                if(!mode_twosnakes)
+                    document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
+                else if(mode_twosnakes)
+                {
+                    document.getElementById("snake2_length").innerHTML = "Blue length: " + snake2_length;
+                }
+                    
+            }
             //document.getElementById("shorter_multiplier").innerHTML = "multiplier: " + shorter_multiplier;
             //document.getElementById("longer_multiplier").innerHTML = "multiplier: " + longer_multiplier;
             this.xspeed = 0;
@@ -80,12 +100,11 @@ function Snake()
             else
             {
                 gameOver = false;
-            }
+            }  
         }
     }
     this.show = function()
     {
-
         for(var i = snake_length - 1; i > 0; i--)
         {
             if(this.xspeed == 1)
@@ -109,7 +128,8 @@ function Snake()
                 snakeY[i] = snakeY[i - 1] + square_height;
             }
         }
-        if(mode_twosnakes){
+        if(mode_twosnakes)
+        {
             for(var i = snake2_length - 1; i > 0; i--)
             {
                 if(this.x2speed == 1)
@@ -138,6 +158,8 @@ function Snake()
         {
             if(mode_twosnakes)
                 fill(91, 15, 191);
+            else if(mode_singleplayer)
+                fill(0, 255, 0);
             else if(!mode_history)
                 fill(255, 127, 80);
             else
@@ -146,7 +168,7 @@ function Snake()
         }
         if(mode_twosnakes)
         {
-            for(var i = 0; i < snake_length; i++)
+            for(var i = 0; i < snake2_length; i++)
             {
                 fill(20, 127, 255);
                 rect(snake2X[i], snake2Y[i], square_width, square_height);
@@ -192,6 +214,8 @@ function Snake()
             fill(255, 0, 0)
             stroke(255, 0, 0);
             rect(foodX + 1, foodY + 1, square_width - 2, square_height - 2)
+            fill(0,255,0);
+            stroke(0,255,0);
             rect(food2X + 1, food2Y + 1, square_width - 2, square_height - 2);
             stroke(0,0,0);
         }
