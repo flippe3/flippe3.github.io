@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Singleplayer</title>
+    <link href="maincss.css" rel="stylesheet" type="text/css">
+    <script src="game.js"></script>
+    <script src="snake.js"></script>
+    <script src="solo_ai.js"></script>
+    <script src="../Libraries/p5.js"></script>
+    <script src="../Libraries/p5.dom.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="bigbox">
+      <header>
+        <a href="index.html"><h1>Snake AI</h1></a>
+      </header>
+      <div id="miniheader">
+        <a href="login.html" class="phpbtn">Login</a>
+        <a href="signup.html" class="phpbtn">Sign Up</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="linkhover" href="index.html">Solo</a></li>
+          <li><a class="linkhover" href="TwoSnakes.html">1v1</a></li>
+          <li><a class="linkhover" href="SinglePlayer.html">Play</a></li>
+          <li><a class="linkhover" href="history.html">History</a></li>
+        </ul>
+      </nav>
+      <article id="player">
+        <div id="myContainer"></div>
+        <h2 id="snake_length">Current length: 0</h2>
+        <h2 id="snake_best">Your best: 0</h2>
+        <p id="instruct">
+          <b>Instructions:</b>
+          <br>
+          Move with the arrow keys on your keyboard.
+          You can only move left, right up and down.
+          You start the game when you click any arrow button.
+          The rules are pretty simple when you hit any of the borders,
+          you lose the game. You can use the arrow buttons if you
+          are on a phone.
+        </p>
+        <p id="ove_pic">
+          Try to beat the highscore set by this crazy man:
+          <img id="ove" alt="A picture on the person with the highscore" src="../Pictures/ove660.jpg" width=180 height=240>
+        </p>
+      </article>
+      <aside id="asideplayer">
+        <h4>Top Scores:</h4>
+        <h3>Ove: 84</h3>
+        <h3>Fleip: 83</h3>
+        <h3>Nina: 72</h3>
+        <h3>Lova: 68</h3>
+        <h3>Elsa: 68</h3>
+        <h3>Peter: 67</h3>
+        <h3>Axel: 64</h3>
+        <h3>Dandy: 62</h3>
+        <h3>AMP: 58</h3>
+        <h3>T1: 54</h3>
+        <h3>Wabble: 50</h3>
+      </aside>
+    </div>
+  </body>
+</html>
