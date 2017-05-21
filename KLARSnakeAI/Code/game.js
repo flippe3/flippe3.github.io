@@ -147,16 +147,16 @@ function draw()
             {
 
                 left = createButton('←');
-                left.position(140, 510);
+                left.position(120, 510);
                 left.size(40,40);
                 right = createButton('→');
-                right.position(220, 510);
+                right.position(200, 510);
                 right.size(40,40);
                 up = createButton('↑');
-                up.position(180, 470);
+                up.position(160, 470);
                 up.size(40,40);
                 down = createButton('↓');
-                down.position(180, 510);
+                down.position(160, 510);
                 down.size(40,40);
                 
                 left.mousePressed(left_phonebtn);
