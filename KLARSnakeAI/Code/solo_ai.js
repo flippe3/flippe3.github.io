@@ -492,7 +492,7 @@ function latest_lengths()
 {
     
     
-    for(var i = 12; i > 0; i--)
+    for(var i = 11; i > 0; i--)
     {
         past_lengths[i] = past_lengths[i - 1];
     }
@@ -533,7 +533,6 @@ function latest_lengths()
         document.getElementById("past_lengths10").innerHTML = "10. " + past_lengths[9];
         document.getElementById("past_lengths11").innerHTML = "11. " + past_lengths[10];
         document.getElementById("past_lengths12").innerHTML = "12. " + past_lengths[11];
-        document.getElementById("past_lengths13").innerHTML = "13. " + past_lengths[12];
     }
 
 }
