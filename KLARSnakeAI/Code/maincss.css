@@ -35,9 +35,17 @@
 }
 /* Slut Storbox */
 /* Login/Signup Form */
-form
+#login
 {
-    border: 3px solid #f1f1f1;
+    border: 1px solid #ccc;
+    padding-bottom: 300px;
+    background-color: #87CEFA;
+}
+#signup
+{
+    border: 1px solid #ccc;
+    padding-bottom: 500px;
+    background-color: #87CEFA;
 }
 #Terms
 {
@@ -55,10 +63,20 @@ b
     font-family: "Regular";
     font-size: 20px;
 }
+.user
+{
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.pass
+{
+    margin-left: 10%;
+    margin-top: 5%;
+}
 .container_login
 {
     padding: 16px;
-    background-color: #87CEFA;
+
 }
 #loginform
 {
@@ -70,6 +88,7 @@ b
 }
 #cancelbtn
 {
+    float: left;
     background-color: #f44336;
     color: white;
     padding: 14px 20px;
@@ -77,9 +96,11 @@ b
     border: none;
     cursor: pointer;
     width: 100%;
+    text-align: center;
 }
 #submitbtn
 {
+    float: left;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -87,6 +108,7 @@ b
     border: none;
     cursor: pointer;
     width: 100%;
+    text-align: center;
 }
 button:hover {
     opacity: 0.8;
@@ -100,7 +122,7 @@ label
     padding: 10px 18px;
     background-color: #f44336;
 }
-#logininput
+.logininput
 {
     width: 100%;
     height: 7%;
@@ -110,10 +132,7 @@ label
     border: 1px solid #ccc;
 }
 /* Slut login/signup Form */
-#history_article
-{
-    width: 100%;
-}
+
 /* Body */
 body
 {
@@ -156,6 +175,7 @@ header
     -webkit-transform: translate(0px, 5px);
 }
 /* Slut header */
+
 /* Text */
 #snake_length, #Last_length, #snake2_length, #snake_best
 {
@@ -226,6 +246,31 @@ p
     margin-top: 2%;
     float: left;
 }
+
+#instruct
+{
+    width: 40%;
+    font-size: 20px;
+}
+
+#wikilink
+{
+    color: #33ccff;
+}
+#ove_pic
+{
+    width: 26%;
+    font-size: 20px;
+}
+
+#ove
+{
+    margin:0;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+/* bet thingy */
 #btn_bet
 {
     width: 20%;
@@ -252,38 +297,22 @@ input
     height: 20%;
     margin-top: 2%;
 }
-
+/* History stuff */
+#history_article
+{
+    width: 100%;
+}
 #history_snake
 {
     margin-left: 5%;
 }
+/* Bild */
 img
 {
     margin-left: 20%;
     margin-top: 20%;
 }
-#wikilink
-{
-    color: #33ccff;
-}
-#instruct
-{
-    width: 40%;
-    font-size: 20px;
-}
-#ove_pic
-{
-    width: 26%;
-    font-size: 20px;
-}
-
-#ove
-{
-    margin:0;
-    margin-left: 2%;
-    margin-top: 2%;
-}
-
+/* Nav saker */
 nav
 {
     height: 4.5%;
@@ -324,6 +353,11 @@ a
     color: #000000;
     padding: 6.8px 10px;
 }
+/* Article */
+#allt
+{
+    float: left;
+}
 article
 {
     height: 75.5%;
@@ -344,16 +378,7 @@ aside
     background-color: #212121;
     float: left;
 }
-.user
-{
-    margin-left: 10%;
-    margin-top: 5%;
-}
-.pass
-{
-    margin-left: 10%;
-    margin-top: 5%;
-}
+/* Slides */
 .slides {
     float: left;
     margin-left: 12%;
@@ -362,7 +387,6 @@ aside
     height: 360px;
     overflow: hidden;
 }
-
 
 .slidesContainer {
     width: 1800px;
@@ -376,7 +400,6 @@ aside
     height: 100%;
     float: left;
 }
-
 .slide:nth-child(1)
 {
     background: url(../Pictures/snake.png);
@@ -413,7 +436,7 @@ aside
     90% {margin-left: -1200px;}
     100% {margin-left: 0px;}
 }
-
+/* Mobilanpassning */
 @media only screen and (max-width: 1500px) {
     #bigbox
     {
@@ -426,9 +449,6 @@ aside
     }
     nav
     { width: 100%; }
-   
-    #snake_length, #Last_length, #snake2_length, #snake_best
-    { font-size: 25px; }
     .container_betting
     {
         width: 30%;
@@ -446,14 +466,7 @@ aside
     {
         width: 55%;
     }
-}
 
-@media only screen and (max-width: 1300px)
-{
-    #bigbox
-    {
-        height: 1400px;
-    }
     nav
     {
         height: 3.8%;
@@ -481,15 +494,44 @@ aside
     }
 }
 
-@media only screen and (max-width: 1220px)
+@media only screen and (max-width: 1300px)
 {
+    nav
+    {
+        height: 3.8%;
+    }
+    header
+    {
+        height: 15%;
+    }
+    #miniheader
+    {
+        height: 15%;
+    }
+    article
+    {
+        height: 81.2%;
+    }
+    aside
+    {
+        height: 81.2%;
+    }
+    .container_betting
+    {
+        width: 70%;
+        height: 28%;
+    }
     #instruct
     {
-        width: 50%;
+        width: 60%;
     }
+}
+
+@media only screen and (max-width: 1220px)
+{
     .slides
     {
-        margin-left: 1%;
+        margin-left: 2%;
     }
 }
 
@@ -497,7 +539,12 @@ aside
 {
     #history_article
     {
-        height: 100%;
+        height: 81.2%;
+    }
+    .slides
+    {
+        height: 320px;
+        width: 600px;
     }
     #historytext
     {
@@ -523,6 +570,10 @@ aside
     {
         font-size: 14px;
         width: 95%;
+    }
+    #history_article
+    {
+        height: 86.66%;
     }
     h1
     {

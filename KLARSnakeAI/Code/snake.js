@@ -49,11 +49,11 @@ function Snake()
                     document.getElementById("snake_length").innerHTML = "Purple length: " + snake_length;
                 else
                     document.getElementById("snake_length").innerHTML = "Current length: " + snake_length;
-                
+
             }
-                
-            
-            
+
+
+
         }
         if(snake2X[0] == food2X && snake2Y[0] == food2Y)
         {
@@ -75,7 +75,7 @@ function Snake()
                 {
                     document.getElementById("snake2_length").innerHTML = "Blue length: " + snake2_length;
                 }
-                    
+
             }
             this.xspeed = 0;
             this.yspeed = 0;
@@ -98,7 +98,7 @@ function Snake()
             else
             {
                 gameOver = false;
-            }  
+            }
         }
     }
     this.show = function()

@@ -496,9 +496,9 @@ function latest_lengths()
     }
     past_lengths[0] = snake_length;
     if(!mode_twosnakes && !mode_singleplayer && !mode_history)
-    {   
+    {
         sum += past_lengths[0];
-        document.getElementById("Last_length").innerHTML = "Last length:"+ past_lengths[0];
+        document.getElementById("Last_length").innerHTML = "Last length: "+ past_lengths[0];
     }
     if(mode_twosnakes)
     {
@@ -511,11 +511,11 @@ function latest_lengths()
     }
     if(mode_singleplayer)
     {
-       if(past_lengths[0] > yourbest)
+        if(past_lengths[0] > yourbest)
         {
             yourbest = past_lengths[0];
             document.getElementById("snake_best").innerHTML = "Your best: " + yourbest;
-        } 
+        }
     }
 
     if(!mode_singleplayer && !mode_history)

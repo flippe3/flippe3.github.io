@@ -25,7 +25,7 @@ var medium = false;
 var big = true;
 var change = false;
 var megasmall = false;
-var last = 3;
+var last = 4;
 var left, right, up, down;
 function setup()
 {
@@ -40,15 +40,15 @@ function setup()
         frameRate(10);
         gen_food();
 
-        left = createButton('Left');
+        left = createButton('←');
         left.position(-50, -50);
-        right = createButton('Right');
+        right = createButton('→');
         right.position(-50, -50);
-        up = createButton('Up');
+        up = createButton('↑');
         up.position(-50, -50);
-        down = createButton('Down');
+        down = createButton('↓');
         down.position(-50, -50);
-        
+
     }
     else if(window.location.href.indexOf("history") != -1)
     {
@@ -111,9 +111,7 @@ function setup()
 
 function draw()
 {
-
     window_width = window.innerWidth;
-
     if(!mode_history){
         if(window_width > 1000)
         {
@@ -129,36 +127,39 @@ function draw()
             small = false;
             megasmall = false;
         }
-        else if(window_width < 700)
+        else if(window_width < 700 && window_width >= 370)
         {
             small = true;
             big = false;
             medium = false;
+            megasmall = false;
         }
-        if(small && last != 1)
+        else if(window_width < 370)
+        {
+            small = false;
+            big = false;
+            medium = false;
+            megasmall = true;
+        }
+        if(megasmall && last != 1)
         {
             last = 1;
-            square_width = 12;
-            square_height = 12;
-            WIDTH = 360;
-            HEIGHT = 360;
+            square_width = 10;
+            square_height = 10;
+            WIDTH = 300;
+            HEIGHT = 300;
             snake_length = 1;
             if(mode_singleplayer)
             {
-
-                left = createButton('←');
-                left.position(120, 510);
+                left.position(100, 450);
                 left.size(40,40);
-                right = createButton('→');
-                right.position(200, 510);
+                right.position(180, 450);
                 right.size(40,40);
-                up = createButton('↑');
-                up.position(160, 470);
+                up.position(140, 410);
                 up.size(40,40);
-                down = createButton('↓');
-                down.position(160, 510);
+                down.position(140, 450);
                 down.size(40,40);
-                
+
                 left.mousePressed(left_phonebtn);
                 right.mousePressed(right_phonebtn);
                 up.mousePressed(up_phonebtn);
@@ -184,9 +185,53 @@ function draw()
             myCanvas = createCanvas(WIDTH, HEIGHT);
             myCanvas.parent('myContainer');
         }
-        else if(medium && last != 2)
+        if(small && last != 2)
         {
             last = 2;
+            square_width = 12;
+            square_height = 12;
+            WIDTH = 360;
+            HEIGHT = 360;
+            snake_length = 1;
+            if(mode_singleplayer)
+            {
+                left.position(120, 510);
+                left.size(40,40);
+                right.position(200, 510);
+                right.size(40,40);
+                up.position(160, 470);
+                up.size(40,40);
+                down.position(160, 510);
+                down.size(40,40);
+
+                left.mousePressed(left_phonebtn);
+                right.mousePressed(right_phonebtn);
+                up.mousePressed(up_phonebtn);
+                down.mousePressed(down_phonebtn);
+
+            }
+            if(!mode_twosnakes)
+            {
+                snakeX[0] = WIDTH / 2;
+                snakeY[0] = HEIGHT / 2;
+                gen_food();
+            }
+            else
+            {
+                snake2_length = 1;
+                snakeX[0] = (WIDTH / 2) - (4 * square_width);
+                snakeY[0] = (HEIGHT / 2)
+                snake2X[0] = (WIDTH / 2) + (4 * square_width);
+                snake2Y[0] = (HEIGHT / 2);
+                gen_food();
+                gen_food2();
+            }
+            myCanvas = createCanvas(WIDTH, HEIGHT);
+            myCanvas.parent('myContainer');
+        }
+        else if(medium && last != 3)
+        {
+            last = 3;
             square_width = 16;
             square_height = 16;
             WIDTH = 480;
@@ -213,9 +258,9 @@ function draw()
             myCanvas = createCanvas(WIDTH, HEIGHT);
             myCanvas.parent('myContainer');
         }
-        else if(big && last != 3)
+        else if(big && last != 4)
         {
-            last = 3;
+            last = 4;
             square_width = 20;
             square_height = 20;
             WIDTH = 600;
