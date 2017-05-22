@@ -1,4 +1,4 @@
-@charset "utf-8";
+flippe3.github.io/KLARSnakeAI/Code/index.html@charset "utf-8";
 /* Fonts */
 @font-face
 {
@@ -583,7 +583,105 @@ aside
     #instruct
     {
         width: 60%;
-        font-size: 16px;
+        font-size: 141
+flippe3.github.io/KLARSnakeAI/Code/index.html@charset "utf-8";
+2
+/* Fonts */
+3
+@font-face
+4
+{
+5
+    font-family: "Header_font";
+6
+    src: url("../Fonts/LEIXO-DEMO.ttf");
+7
+}
+8
+@font-face
+9
+{
+10
+    font-family: "numbers";
+11
+    src: url("../Fonts/VCR_OSD_MONO_1.001.ttf");
+12
+}
+13
+@font-face
+14
+{
+15
+    font-family: "tenum";
+16
+    src: url("../Fonts/LemonMilk.otf");
+17
+}
+18
+@font-face
+19
+{
+20
+    font-family: "Regular";
+21
+    src: url("../Fonts/Champagne & Limousines.ttf");
+22
+}
+23
+/* Border-box på allting */
+24
+*
+25
+{
+26
+    box-sizing: border-box;
+27
+}
+28
+/* Slut border-box */
+29
+/* Storbox */
+30
+#bigbox
+31
+{
+32
+    background-color: #FFF;
+33
+    height: 1200px;
+34
+    width:100%;
+35
+}
+36
+/* Slut Storbox */
+37
+/* Login/Signup Form */
+38
+#login
+39
+{
+40
+    border: 1px solid #ccc;
+41
+    padding-bottom: 300px;
+42
+    background-color: #87CEFA;
+43
+}
+44
+#signup
+45
+{
+46
+    border: 1px solid #ccc;
+47
+    padding-bottom: 500px;
+48
+    background-color: #87CEFA;
+49
+}
+px;
     }
     nav
     {
