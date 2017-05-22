@@ -59,10 +59,10 @@ function setup()
         gen_food();
 
         last = 1;
-        square_width = 12;
-        square_height = 12;
-        WIDTH = 360;
-        HEIGHT = 360;
+        square_width = 10;
+        square_height = 10;
+        WIDTH = 300;
+        HEIGHT = 300;
         snake_length = 1;
         snakeX[0] = WIDTH / 2;
         snakeY[0] = HEIGHT / 2;
