@@ -490,18 +490,17 @@ function check_gameover()
 
 function latest_lengths()
 {
-    
-    
     for(var i = 11; i > 0; i--)
     {
         past_lengths[i] = past_lengths[i - 1];
     }
-    if(!mode_twosnakes)
-    {
-        past_lengths[0] = snake_length;   
+    past_lengths[0] = snake_length;
+    if(!mode_twosnakes && !mode_singleplayer && !mode_history)
+    {   
         sum += past_lengths[0];
+        document.getElementById("Last_length").innerHTML = "Last length:"+ past_lengths[0];
     }
-    else
+    if(mode_twosnakes)
     {
         if(snake_length == snake2_length)
             past_lengths[0] = "same";
