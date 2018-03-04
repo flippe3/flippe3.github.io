@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* Fonts */
+@font-face
+{
+    font-family: "footer";
+    src: url("../fonts/LEXIPA.ttf");
+}
+
+@font-face
+{
+    font-family: "header";
+    src: url("../fonts/LEIXO-DEMO.ttf");
+}
+
+#bigbox
+{
+    background-color: #000000;
+    height: 900px;
+    width:100%;
+}
+
+header
+{
+    height: 15%;
+    width: 100%;
+    background-color: #054FE1;
+    float:left;
+    text-align: center;
+}
+
+h1
+{
+    color: #FFF;
+    font-size: 102px;
+    margin-top: 6px;
+    text-shadow: 3px 3px 2px #1a1a1a;
+}
+
+nav
+{
+    font-family: "header";
+    height: 4.5%;
+    width: 100%;
+    background-color: #0C3D9E;
+    float: left;
+}
+
+ul
+{
+    list-style:none;
+    background-color:#444;
+    text-align:center;
+    padding:0;
+    margin:0; 
+}
+
+li
+{
+    color:#000000;
+    height:100%;
+    width:33.33333%;
+    float:left;
+    font-size: 24px;
+}
+.linkhover
+{
+    transition: 0.4s;
+    text-decoration: none;
+    line-height: 42px;
+    color: #FFF;
+}
+ 
+.linkhover:hover {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5.9px 10px;
+}
+a
+{
+    text-decoration: none;
+}
+article
+{
+    height: 78.0%;
+    width: 100%;
+    float: left;
+    background-color: #141C2B;
+}
+
+footer
+{
+    height: 3.5%;
+    width: 100%;
+    float: left;
+    background-color: #1A2C4F;
+}
+
+.footer_text
+{
+    font-family: "footer";
+    line-height: 5px;
+    font-size: 14px;
+    color: #FFF;
+}
+
+img
+{
+    padding: 5%;
+    width: 800px;
+    height: 450px;
+}
