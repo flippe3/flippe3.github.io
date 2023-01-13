@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Meta-RL
+permalink: /meta-rl/
 ---
 
 I'm Filip Nilsson and I'm studying computer science at Luleå University of Technlogy.
